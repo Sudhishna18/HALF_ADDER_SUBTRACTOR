@@ -35,12 +35,6 @@ Figure -02 HALF Subtractor
 
 **Truthtable**
 
-![image](https://github.com/user-attachments/assets/78b2ff46-6a5a-4f95-beaf-9ec1eb5ffaf2)
-
-![image](https://github.com/user-attachments/assets/f505cfe6-05b4-4622-8b3a-49eee0f4c378)
-
-
-
 **Procedure**
 
 1.	Type the program in Quartus software.
@@ -53,33 +47,36 @@ Figure -02 HALF Subtractor
 
 5.	For different input combinations generate the timing diagram.
 
-
+~~~
 **Program:**
-```
-Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
-Developed by:P.Sudhishna
-RegisterNumber:24007608
-```
-```
- module ha(a,b,sum,carry);
- input a,b;
- output sum,carry;
- assign sum= (a ^ b);
- assign carry= ( a & b);
- endmodule
-```
+i)HALF ADDER
 
+module exp3(a,b,sum,carry);
+input a,b;
+output sum,carry;
+assign sum= (a ^ b);
+assign carry= ( a & b);
+endmodule
+
+ii)HALF SUBTRACTOR
+
+module iiexp3(a,b,difference,borrow);
+input a,b;
+output difference,borrow;
+assign difference= (a ^ b);
+assign borrow= ( ~a & b);
+endmodule
+/* Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
+
+Developed by: sudhishna p
+RegisterNumber: 24007608
+~~~
 **RTL Schematic**
-
-![image](https://github.com/user-attachments/assets/7b05e03d-f8ec-4f88-8bfa-2a582699e13a)
-
+![Screenshot 2024-12-04 202526](https://github.com/user-attachments/assets/f676d411-d116-4189-aed7-b82a7bc99681)
+![Screenshot 2024-12-04 204300](https://github.com/user-attachments/assets/7aa862c7-fa0a-4a20-9217-f5339eeecb65)
 
 **Output/TIMING Waveform**
-
-![image](https://github.com/user-attachments/assets/ce2319cf-99e6-4bae-b906-74878cfe7039)
-
+![Screenshot 2024-12-04 202852](https://github.com/user-attachments/assets/55409bec-95cf-4a5c-a7d7-afc9fd7b7611)
+![Screenshot 2024-12-04 204040](https://github.com/user-attachments/assets/1af0a304-f9ed-4986-a54a-2f1750865a80)
 
 **Result:**
-
- Designed a half adder and half subtractor circuit and verified its truth table in Quartus using Verilog
- programming
